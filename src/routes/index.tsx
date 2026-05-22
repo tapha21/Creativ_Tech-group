@@ -10,14 +10,15 @@ import { Process } from "@/components/site/Process";
 import { Tech } from "@/components/site/Tech";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
+import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Creativ-Tech — Building Africa's Digital Future" },
-      { name: "description", content: "African digital innovation studio specialized in software, cybersecurity, AI automation and digital transformation. From Dakar, for the world." },
-      { property: "og:title", content: "Creativ-Tech — Building Africa's Digital Future" },
-      { property: "og:description", content: "Software, cybersecurity, AI automation and digital transformation — engineered in Dakar." },
+      { title: "Creativ-Tech — Construire le futur digital de l'Afrique" },
+      { name: "description", content: "Studio africain d'innovation digitale spécialisé en logiciel, cybersécurité, automatisation IA et transformation digitale. Depuis Dakar, pour le monde." },
+      { property: "og:title", content: "Creativ-Tech — Construire le futur digital de l'Afrique" },
+      { property: "og:description", content: "Logiciel, cybersécurité, automatisation IA et transformation digitale — pensés à Dakar." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -32,7 +33,7 @@ export const Route = createFileRoute("/")({
         url: "/",
         slogan: "Solution Digital",
         areaServed: "Africa",
-        description: "Digital innovation studio building software, cybersecurity and AI solutions for African and international businesses.",
+        description: "Studio d'innovation digitale construisant logiciel, cybersécurité et solutions IA pour les entreprises africaines et internationales.",
       }),
     }],
   }),
@@ -53,6 +54,7 @@ function Home() {
       <Testimonials />
       <Contact />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   );
 }
