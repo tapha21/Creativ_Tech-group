@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Mail, Phone, MessageCircle, MapPin, Send } from "lucide-react";
 import { SectionHeader } from "./Services";
+import { WHATSAPP_URL } from "@/lib/site-data";
 
 export function Contact() {
   const [sent, setSent] = useState(false);
@@ -8,17 +9,17 @@ export function Contact() {
   return (
     <section id="contact" className="border-b border-border py-24 lg:py-32">
       <div className="container-x">
-        <SectionHeader eyebrow="Contact" title="Let's build what's next" sub="Tell us about your project — we reply within one business day." />
+        <SectionHeader eyebrow="Contact" title="Construisons ce qui vient ensuite" sub="Parlez-nous de votre projet — nous répondons sous un jour ouvré." />
 
         <div className="mx-auto mt-14 grid max-w-5xl gap-6 lg:grid-cols-[1fr_1.4fr]">
           <div className="flex flex-col gap-3">
             <InfoCard icon={<Mail className="h-4 w-4" />} title="Email" value="hello@creativ-tech.io" />
-            <InfoCard icon={<Phone className="h-4 w-4" />} title="Phone" value="+221 77 000 00 00" />
-            <a href="https://wa.me/221770000000" target="_blank" rel="noreferrer">
-              <InfoCard icon={<MessageCircle className="h-4 w-4" />} title="WhatsApp" value="Chat with us instantly" accent />
+            <InfoCard icon={<Phone className="h-4 w-4" />} title="Téléphone" value="+221 77 000 00 00" />
+            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+              <InfoCard icon={<MessageCircle className="h-4 w-4" />} title="WhatsApp" value="Discutez avec nous instantanément" accent />
             </a>
-            <InfoCard icon={<MapPin className="h-4 w-4" />} title="Office" value="Dakar, Sénégal" />
-            <div className="h-48 overflow-hidden rounded-xl border border-border bg-muted dot-bg" />
+            <InfoCard icon={<MapPin className="h-4 w-4" />} title="Bureau" value="Dakar, Sénégal" />
+            <div className="h-48 overflow-hidden rounded-xl border border-border bg-muted notebook-bg" />
           </div>
 
           <form
@@ -26,34 +27,44 @@ export function Contact() {
             className="rounded-xl border border-border bg-card p-6 md:p-8"
           >
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="Name" name="name" placeholder="Awa Diop" />
-              <Field label="Email" name="email" type="email" placeholder="you@company.com" />
-              <Field label="Phone" name="phone" placeholder="+221 ..." />
-              <Field label="Company" name="company" placeholder="Acme Inc." />
+              <Field label="Nom" name="name" placeholder="Awa Diop" />
+              <Field label="Email" name="email" type="email" placeholder="vous@entreprise.com" />
+              <Field label="Téléphone" name="phone" placeholder="+221 ..." />
+              <Field label="Entreprise" name="company" placeholder="Acme Inc." />
             </div>
             <div className="mt-4">
               <label className="mb-1.5 block text-xs font-medium text-muted-foreground">Service</label>
               <select className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm">
-                <option>Software Development</option>
-                <option>Cybersecurity</option>
+                <option>Développement Logiciel</option>
+                <option>Cybersécurité</option>
                 <option>UI/UX Design</option>
-                <option>Mobile App Development</option>
-                <option>Cloud Solutions</option>
-                <option>AI & Automation</option>
-                <option>IT Consulting</option>
-                <option>Branding & Identity</option>
+                <option>Développement Mobile</option>
+                <option>Solutions Cloud</option>
+                <option>IA & Automatisation</option>
+                <option>Conseil IT</option>
+                <option>Branding & Identité</option>
               </select>
             </div>
             <div className="mt-4">
-              <label className="mb-1.5 block text-xs font-medium text-muted-foreground">Project details</label>
-              <textarea rows={5} className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm" placeholder="Tell us about your goals, timeline and constraints." />
+              <label className="mb-1.5 block text-xs font-medium text-muted-foreground">Détails du projet</label>
+              <textarea rows={5} className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm" placeholder="Décrivez vos objectifs, votre calendrier et vos contraintes." />
             </div>
-            <button
-              type="submit"
-              className="mt-6 inline-flex h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-            >
-              {sent ? "Message sent — we'll reply shortly" : (<>Send message <Send className="h-4 w-4" /></>)}
-            </button>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <button
+                type="submit"
+                className="inline-flex h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                {sent ? "Message envoyé — réponse rapide" : (<>Envoyer le message <Send className="h-4 w-4" /></>)}
+              </button>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-11 items-center gap-2 rounded-md bg-[#25D366] px-5 text-sm font-medium text-white transition-opacity hover:opacity-90"
+              >
+                <MessageCircle className="h-4 w-4" /> WhatsApp
+              </a>
+            </div>
           </form>
         </div>
       </div>

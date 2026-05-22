@@ -6,7 +6,7 @@ export function WhyUs() {
   return (
     <section id="about" className="border-b border-border py-24 lg:py-32">
       <div className="container-x">
-        <SectionHeader eyebrow="Why Creativ-Tech" title="A startup partner built for serious operators" />
+        <SectionHeader eyebrow="Pourquoi Creativ-Tech" title="Un partenaire startup conçu pour les opérateurs sérieux" />
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {whyUs.map((w) => (
             <div key={w.title} className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-foreground/20">

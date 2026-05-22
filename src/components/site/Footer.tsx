@@ -13,24 +13,24 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-            Engineering Africa's digital future from Dakar.
+            L'ingénierie du futur digital de l'Afrique, depuis Dakar.
           </p>
           <div className="mt-5 flex gap-2">
             {[Linkedin, Twitter, Github, Instagram].map((Icon, i) => (
-              <a key={i} href="#" className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-muted-foreground hover:text-foreground">
+              <a key={i} href="#" aria-label="Réseau social" className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-muted-foreground hover:text-foreground">
                 <Icon className="h-4 w-4" />
               </a>
             ))}
           </div>
         </div>
 
-        <FooterCol title="Services" links={["Software", "Cybersecurity", "UI/UX", "Mobile", "Cloud", "AI"]} />
-        <FooterCol title="Company" links={["About", "Projects", "Process", "Careers", "Contact"]} />
-        <FooterCol title="Resources" links={["Blog", "Case Studies", "Press kit", "Privacy", "Terms"]} />
+        <FooterCol title="Services" links={["Logiciel", "Cybersécurité", "UI/UX", "Mobile", "Cloud", "IA"]} />
+        <FooterCol title="Entreprise" links={["À propos", "Projets", "Processus", "Carrières", "Contact"]} />
+        <FooterCol title="Ressources" links={["Blog", "Études de cas", "Kit presse", "Confidentialité", "Mentions légales"]} />
       </div>
 
       <div className="container-x mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
-        <p>© {new Date().getFullYear()} Creativ-Tech. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Creativ-Tech. Tous droits réservés.</p>
         <p>Solution Digital · Dakar, Sénégal</p>
       </div>
     </footer>

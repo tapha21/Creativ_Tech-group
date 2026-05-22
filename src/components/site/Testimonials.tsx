@@ -13,7 +13,7 @@ export function Testimonials() {
   return (
     <section className="border-b border-border py-24 lg:py-32">
       <div className="container-x">
-        <SectionHeader eyebrow="Testimonials" title="Trusted by modern businesses" />
+        <SectionHeader eyebrow="Témoignages" title="La confiance des entreprises modernes" />
         <div className="mx-auto mt-14 max-w-3xl">
           <div className="rounded-xl border border-border bg-card p-8 md:p-12">
             <Quote className="h-8 w-8 text-accent" />
@@ -26,7 +26,7 @@ export function Testimonials() {
                 transition={{ duration: 0.3 }}
               >
                 <p className="mt-4 text-balance font-display text-xl leading-relaxed md:text-2xl">
-                  "{t.quote}"
+                  «&nbsp;{t.quote}&nbsp;»
                 </p>
                 <div className="mt-6">
                   <div className="font-semibold">{t.name}</div>
@@ -41,15 +41,15 @@ export function Testimonials() {
                     key={k}
                     onClick={() => setI(k)}
                     className={`h-1.5 rounded-full transition-all ${k === i ? "w-6 bg-primary" : "w-1.5 bg-muted-foreground/30"}`}
-                    aria-label={`Go to slide ${k + 1}`}
+                    aria-label={`Aller au témoignage ${k + 1}`}
                   />
                 ))}
               </div>
               <div className="flex gap-2">
-                <button onClick={prev} className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border hover:bg-muted">
+                <button onClick={prev} aria-label="Précédent" className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border hover:bg-muted">
                   <ChevronLeft className="h-4 w-4" />
                 </button>
-                <button onClick={next} className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border hover:bg-muted">
+                <button onClick={next} aria-label="Suivant" className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border hover:bg-muted">
                   <ChevronRight className="h-4 w-4" />
                 </button>
               </div>
