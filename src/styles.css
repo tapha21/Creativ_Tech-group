@@ -147,6 +147,10 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-feature-settings: "cv11", "ss01";
+    background-image:
+      linear-gradient(to bottom, transparent 31px, color-mix(in oklab, var(--foreground) 7%, transparent) 31px, color-mix(in oklab, var(--foreground) 7%, transparent) 32px, transparent 32px);
+    background-size: 100% 32px;
+    background-attachment: fixed;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
