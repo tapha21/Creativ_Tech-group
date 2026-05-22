@@ -4,81 +4,84 @@ import {
 } from "lucide-react";
 
 export const services = [
-  { icon: Code2, title: "Software Development", desc: "Custom web apps, SaaS platforms, APIs, ERP systems built to scale." },
-  { icon: ShieldCheck, title: "Cybersecurity", desc: "Security audits, infrastructure protection, penetration testing." },
-  { icon: Calculator, title: "Accounting Digitalization", desc: "Digital accounting systems, automation, business reporting." },
-  { icon: Palette, title: "UI/UX Design", desc: "Modern interfaces, product design, mobile-first experiences." },
-  { icon: MessageSquare, title: "Community Management", desc: "Social media, branding and digital communication.", badge: "Coming Soon" },
-  { icon: Smartphone, title: "Mobile App Development", desc: "Native and cross-platform Android & iOS applications." },
-  { icon: Cloud, title: "Cloud Solutions", desc: "Cloud infrastructure, deployment and DevOps pipelines." },
-  { icon: Bot, title: "AI & Automation", desc: "Business automation powered by AI agents and workflows." },
-  { icon: Briefcase, title: "IT Consulting", desc: "Digital strategy and end-to-end business transformation." },
-  { icon: Sparkles, title: "Branding & Identity", desc: "Visual identity, logo systems and corporate branding." },
+  { icon: Code2, title: "Développement Logiciel", desc: "Applications web sur mesure, plateformes SaaS, APIs et ERP conçus pour scaler." },
+  { icon: ShieldCheck, title: "Cybersécurité", desc: "Audits de sécurité, protection d'infrastructure et tests d'intrusion." },
+  { icon: Calculator, title: "Digitalisation Comptable", desc: "Systèmes comptables digitaux, automatisation et reporting business." },
+  { icon: Palette, title: "UI/UX Design", desc: "Interfaces modernes, design produit et expériences mobile-first." },
+  { icon: MessageSquare, title: "Community Management", desc: "Réseaux sociaux, branding et communication digitale.", badge: "Bientôt" },
+  { icon: Smartphone, title: "Développement Mobile", desc: "Applications natives et cross-platform Android & iOS." },
+  { icon: Cloud, title: "Solutions Cloud", desc: "Infrastructure cloud, déploiement et pipelines DevOps." },
+  { icon: Bot, title: "IA & Automatisation", desc: "Automatisation métier propulsée par des agents IA et des workflows.", badge: "Bientôt" },
+  { icon: Briefcase, title: "Conseil IT", desc: "Stratégie digitale et transformation business de bout en bout." },
+  { icon: Sparkles, title: "Branding & Identité", desc: "Identité visuelle, systèmes de logo et branding corporate." },
 ] as const;
 
 export const projects = [
-  { title: "Creativ_Park", category: "SaaS", client: "Internal", status: "Live", progress: 100,
-    description: "Workspace platform for African creators and tech teams.",
+  { title: "Creativ_Park", category: "SaaS", client: "Interne", status: "En ligne", progress: 100,
+    description: "Plateforme workspace pour créateurs et équipes tech africaines.",
     tech: ["React", "Node.js", "Postgres"] },
-  { title: "SmartCompta", category: "SaaS", client: "Cabinet ABC", status: "Live", progress: 100,
-    description: "Cloud accounting & invoicing tailored for West African SMEs.",
+  { title: "SmartCompta", category: "SaaS", client: "Cabinet ABC", status: "En ligne", progress: 100,
+    description: "Comptabilité et facturation cloud taillées pour les PME ouest-africaines.",
     tech: ["Next.js", "Stripe", "Prisma"] },
-  { title: "SecureNet Africa", category: "Cybersecurity", client: "Confidential", status: "Ongoing", progress: 72,
-    description: "Continuous infrastructure monitoring and pentest platform.",
+  { title: "SecureNet Africa", category: "Cybersécurité", client: "Confidentiel", status: "En cours", progress: 72,
+    description: "Surveillance d'infrastructure et plateforme de pentest en continu.",
     tech: ["Go", "Docker", "AWS"] },
-  { title: "WaveAnalytics", category: "AI", client: "FinTech Dakar", status: "Beta", progress: 85,
-    description: "AI-driven analytics for mobile money transactions.",
+  { title: "WaveAnalytics", category: "IA", client: "FinTech Dakar", status: "Bêta", progress: 85,
+    description: "Analyse pilotée par IA pour les transactions de mobile money.",
     tech: ["Python", "FastAPI", "ML"] },
-  { title: "Dakar Delivery", category: "Mobile Apps", client: "DDP SARL", status: "Live", progress: 100,
-    description: "Last-mile delivery app connecting riders and merchants.",
+  { title: "Dakar Delivery", category: "Mobile", client: "DDP SARL", status: "En ligne", progress: 100,
+    description: "Application de livraison last-mile pour livreurs et marchands.",
     tech: ["React Native", "Firebase"] },
-  { title: "Teranga Bank Portal", category: "Web Apps", client: "Teranga Group", status: "Ongoing", progress: 60,
-    description: "Customer portal with KYC, transfers and dashboards.",
+  { title: "Teranga Bank Portal", category: "Web", client: "Teranga Group", status: "En cours", progress: 60,
+    description: "Portail client avec KYC, virements et tableaux de bord.",
     tech: ["Angular", "Java", "Postgres"] },
-  { title: "Sahel Brand System", category: "Branding", client: "Sahel Foods", status: "Live", progress: 100,
-    description: "Full corporate identity and brand guideline system.",
+  { title: "Sahel Brand System", category: "Branding", client: "Sahel Foods", status: "En ligne", progress: 100,
+    description: "Identité corporate complète et système de charte graphique.",
     tech: ["Figma", "Design System"] },
-  { title: "AgriBot Sénégal", category: "AI", client: "Coop Agricole", status: "Beta", progress: 78,
-    description: "AI assistant for crop planning and market pricing.",
+  { title: "AgriBot Sénégal", category: "IA", client: "Coop Agricole", status: "Bêta", progress: 78,
+    description: "Assistant IA pour la planification des cultures et les prix du marché.",
     tech: ["OpenAI", "Python"] },
 ] as const;
 
-export const categories = ["All", "Web Apps", "Mobile Apps", "SaaS", "Cybersecurity", "Branding", "AI"] as const;
+export const categories = ["Tous", "Web", "Mobile", "SaaS", "Cybersécurité", "Branding", "IA"] as const;
 
 export const stats = [
-  { value: 120, suffix: "+", label: "Projects Completed" },
-  { value: 80, suffix: "+", label: "Happy Clients" },
-  { value: 45, suffix: "+", label: "Security Audits" },
-  { value: 18, suffix: "", label: "Team Members" },
+  { value: 120, suffix: "+", label: "Projets livrés" },
+  { value: 80, suffix: "+", label: "Clients satisfaits" },
+  { value: 45, suffix: "+", label: "Audits de sécurité" },
+  { value: 18, suffix: "", label: "Membres de l'équipe" },
 ] as const;
 
 export const whyUs = [
-  { title: "Innovation Driven", desc: "We pair emerging tech with real business outcomes." },
-  { title: "African Market Expertise", desc: "Built in Dakar, deployed across West Africa." },
-  { title: "Enterprise Security", desc: "Security-first engineering on every layer." },
-  { title: "Fast Delivery", desc: "Agile squads shipping production in weeks, not quarters." },
-  { title: "Scalable Solutions", desc: "Architectures designed for millions of users." },
-  { title: "Modern Technologies", desc: "Tomorrow's stack, hardened for production today." },
+  { title: "Orientés Innovation", desc: "Nous combinons technologies émergentes et résultats business concrets." },
+  { title: "Expertise du Marché Africain", desc: "Conçu à Dakar, déployé à travers l'Afrique de l'Ouest." },
+  { title: "Sécurité Entreprise", desc: "Une ingénierie security-first à tous les niveaux." },
+  { title: "Livraison Rapide", desc: "Des équipes agiles qui livrent en production en semaines, pas en trimestres." },
+  { title: "Solutions Scalables", desc: "Des architectures pensées pour des millions d'utilisateurs." },
+  { title: "Technologies Modernes", desc: "La stack de demain, durcie pour la production d'aujourd'hui." },
 ] as const;
 
 export const testimonials = [
-  { name: "Awa Diop", role: "CEO, Teranga Group", quote: "Creativ-Tech rebuilt our entire client portal in 10 weeks. Performance, design and security are world-class." },
-  { name: "Cheikh Ndiaye", role: "Founder, DDP SARL", quote: "Their team understood our market instantly. Our delivery app scaled from 0 to 12k users in 3 months." },
-  { name: "Fatou Sow", role: "CFO, Cabinet ABC", quote: "SmartCompta replaced 4 tools and saved us hundreds of hours per month. Truly enterprise-grade." },
-  { name: "Mamadou Ba", role: "CTO, Sahel FinTech", quote: "Best engineering partner we've worked with on the continent. Sharp, fast, deeply professional." },
+  { name: "Awa Diop", role: "CEO, Teranga Group", quote: "Creativ-Tech a reconstruit notre portail client en 10 semaines. Performance, design et sécurité de classe mondiale." },
+  { name: "Cheikh Ndiaye", role: "Fondateur, DDP SARL", quote: "Leur équipe a compris notre marché immédiatement. Notre app de livraison est passée de 0 à 12k utilisateurs en 3 mois." },
+  { name: "Fatou Sow", role: "DAF, Cabinet ABC", quote: "SmartCompta a remplacé 4 outils et nous fait gagner des centaines d'heures par mois. Vraiment de qualité entreprise." },
+  { name: "Mamadou Ba", role: "CTO, Sahel FinTech", quote: "Le meilleur partenaire d'ingénierie avec qui nous ayons travaillé sur le continent. Rapide, pointu, profondément professionnel." },
 ] as const;
 
 export const processSteps = [
-  { n: "01", title: "Discovery", desc: "Stakeholder interviews and product audits." },
-  { n: "02", title: "Strategy", desc: "Roadmap, scope and success metrics." },
-  { n: "03", title: "Design", desc: "Prototypes, design system, user testing." },
-  { n: "04", title: "Development", desc: "Agile delivery with weekly demos." },
-  { n: "05", title: "Testing", desc: "QA, security and performance hardening." },
-  { n: "06", title: "Deployment", desc: "CI/CD, monitoring and observability." },
-  { n: "07", title: "Support", desc: "SLA-backed maintenance and evolution." },
+  { n: "01", title: "Découverte", desc: "Interviews des parties prenantes et audits produit." },
+  { n: "02", title: "Stratégie", desc: "Roadmap, périmètre et indicateurs de succès." },
+  { n: "03", title: "Design", desc: "Prototypes, design system et tests utilisateurs." },
+  { n: "04", title: "Développement", desc: "Livraison agile avec démos hebdomadaires." },
+  { n: "05", title: "Tests", desc: "QA, sécurité et durcissement des performances." },
+  { n: "06", title: "Déploiement", desc: "CI/CD, monitoring et observabilité." },
+  { n: "07", title: "Support", desc: "Maintenance et évolutions garanties par SLA." },
 ] as const;
 
 export const techStack = [
   "React", "Angular", "Node.js", "Python", "Docker",
   "AWS", "PostgreSQL", "MongoDB", "Firebase", "Tailwind CSS",
 ] as const;
+
+export const WHATSAPP_NUMBER = "221770000000";
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Bonjour Creativ-Tech, j'aimerais discuter d'un projet.")}`;

@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { WHATSAPP_URL } from "@/lib/site-data";
 
 const links = [
   { href: "#services", label: "Services" },
-  { href: "#projects", label: "Projects" },
-  { href: "#process", label: "Process" },
-  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projets" },
+  { href: "#process", label: "Processus" },
+  { href: "#about", label: "À propos" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -58,17 +59,26 @@ export function Nav() {
 
         <div className="flex items-center gap-2">
           <button
-            aria-label="Toggle theme"
+            aria-label="Changer le thème"
             onClick={toggleTheme}
             className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-foreground transition-colors hover:bg-muted"
           >
             {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
           <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp"
+            className="hidden h-9 w-9 items-center justify-center rounded-md bg-[#25D366] text-white transition-opacity hover:opacity-90 md:inline-flex"
+          >
+            <MessageCircle className="h-4 w-4" />
+          </a>
+          <a
             href="#contact"
             className="hidden h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 md:inline-flex"
           >
-            Start a Project
+            Démarrer un projet
           </a>
           <button
             className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border md:hidden"
@@ -93,13 +103,23 @@ export function Nav() {
                 {l.label}
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground"
-            >
-              Start a Project
-            </a>
+            <div className="mt-2 flex gap-2">
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="inline-flex h-10 flex-1 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground"
+              >
+                Démarrer un projet
+              </a>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-[#25D366] px-4 text-sm font-medium text-white"
+              >
+                <MessageCircle className="h-4 w-4" /> WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       )}
