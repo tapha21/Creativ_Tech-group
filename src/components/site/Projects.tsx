@@ -4,13 +4,13 @@ import { projects, categories } from "@/lib/site-data";
 import { SectionHeader } from "./Services";
 
 export function Projects() {
-  const [filter, setFilter] = useState<(typeof categories)[number]>("All");
-  const list = filter === "All" ? projects : projects.filter((p) => p.category === filter);
+  const [filter, setFilter] = useState<(typeof categories)[number]>("Tous");
+  const list = filter === "Tous" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <section id="projects" className="border-b border-border py-24 lg:py-32">
       <div className="container-x">
-        <SectionHeader eyebrow="Selected Work" title="Real products. Real impact." sub="A glimpse of platforms we've shipped for clients across Africa." />
+        <SectionHeader eyebrow="Sélection de projets" title="De vrais produits. Un vrai impact." sub="Un aperçu des plateformes livrées pour nos clients à travers l'Afrique." />
 
         <div className="mt-10 flex flex-wrap justify-center gap-2">
           {categories.map((c) => (
@@ -40,14 +40,14 @@ export function Projects() {
                 transition={{ duration: 0.35 }}
                 className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card"
               >
-                <div className="relative h-44 overflow-hidden border-b border-border bg-muted dot-bg">
+                <div className="relative h-44 overflow-hidden border-b border-border bg-muted notebook-bg">
                   <div className="absolute inset-0 flex items-end justify-between p-4">
                     <span className="rounded-full border border-border bg-background/80 px-2.5 py-1 text-[11px] font-medium backdrop-blur">
                       {p.category}
                     </span>
                     <span className={`rounded-full px-2.5 py-1 text-[11px] font-medium ${
-                      p.status === "Live" ? "bg-primary/10 text-primary" :
-                      p.status === "Beta" ? "bg-accent/15 text-accent" :
+                      p.status === "En ligne" ? "bg-primary/10 text-primary" :
+                      p.status === "Bêta" ? "bg-accent/15 text-accent" :
                       "bg-muted-foreground/10 text-muted-foreground"
                     }`}>
                       {p.status}
@@ -68,7 +68,7 @@ export function Projects() {
                   </div>
                   <div className="mt-5">
                     <div className="mb-1.5 flex justify-between text-[11px] text-muted-foreground">
-                      <span>Completion</span><span>{p.progress}%</span>
+                      <span>Avancement</span><span>{p.progress}%</span>
                     </div>
                     <div className="h-1 overflow-hidden rounded-full bg-muted">
                       <motion.div

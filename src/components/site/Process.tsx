@@ -5,7 +5,7 @@ export function Process() {
   return (
     <section id="process" className="border-b border-border bg-card py-24 lg:py-32">
       <div className="container-x">
-        <SectionHeader eyebrow="Process" title="From idea to production in 7 deliberate steps" />
+        <SectionHeader eyebrow="Processus" title="De l'idée à la production en 7 étapes maîtrisées" />
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {processSteps.map((s) => (
             <div key={s.n} className="rounded-xl border border-border bg-background p-6">

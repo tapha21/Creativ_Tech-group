@@ -5,7 +5,7 @@ export function Services() {
   return (
     <section id="services" className="border-b border-border py-24 lg:py-32">
       <div className="container-x">
-        <SectionHeader eyebrow="Services" title="Everything your business needs to go digital" sub="From the first prototype to enterprise-scale platforms — one partner, one team, one stack." />
+        <SectionHeader eyebrow="Services" title="Tout ce qu'il faut pour digitaliser votre business" sub="Du premier prototype aux plateformes à l'échelle entreprise — un partenaire, une équipe, une stack." />
         <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <motion.div
