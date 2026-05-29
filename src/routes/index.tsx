@@ -51,7 +51,6 @@ function Home() {
       <Stats />
       <Services />
       <Projects />
-      <Partners />
       <WhyUs />
       <Process />
       <Tech />

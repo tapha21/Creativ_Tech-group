@@ -9,8 +9,8 @@ export function MapSection() {
 
         <div className="mx-auto mt-14 grid max-w-6xl gap-6 lg:grid-cols-[1fr_2fr]">
           <div className="flex flex-col gap-3">
-            <InfoTile icon={<MapPin className="h-4 w-4" />} title="Adresse" value="Plateau, Dakar, Sénégal" />
-            <InfoTile icon={<Clock className="h-4 w-4" />} title="Horaires" value="Lun – Ven · 9h – 19h" />
+            <InfoTile icon={<MapPin className="h-4 w-4" />} title="Adresse" value="hlm grand yoff, Dakar, Sénégal" />
+            <InfoTile icon={<Clock className="h-4 w-4" />} title="Horaires" value="Lun – Ven · 8h – 17h" />
             <a
               href="https://www.google.com/maps/dir/?api=1&destination=Dakar,Senegal"
               target="_blank"
