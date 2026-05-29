@@ -8,6 +8,9 @@ import { WhyUs } from "@/components/site/WhyUs";
 import { Testimonials } from "@/components/site/Testimonials";
 import { Process } from "@/components/site/Process";
 import { Tech } from "@/components/site/Tech";
+import { Partners } from "@/components/site/Partners";
+import { Faq } from "@/components/site/Faq";
+import { MapSection } from "@/components/site/MapSection";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
@@ -48,10 +51,13 @@ function Home() {
       <Stats />
       <Services />
       <Projects />
+      <Partners />
       <WhyUs />
       <Process />
       <Tech />
       <Testimonials />
+      <Faq />
+      <MapSection />
       <Contact />
       <Footer />
       <FloatingWhatsApp />

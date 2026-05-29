@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight, Quote, User } from "lucide-react";
 import { testimonials } from "@/lib/site-data";
 import { SectionHeader } from "./Services";
 
@@ -15,7 +15,7 @@ export function Testimonials() {
       <div className="container-x">
         <SectionHeader eyebrow="Témoignages" title="La confiance des entreprises modernes" />
         <div className="mx-auto mt-14 max-w-3xl">
-          <div className="rounded-xl border border-border bg-card p-8 md:p-12">
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-sm md:p-12">
             <Quote className="h-8 w-8 text-accent" />
             <AnimatePresence mode="wait">
               <motion.div
@@ -28,9 +28,14 @@ export function Testimonials() {
                 <p className="mt-4 text-balance font-display text-xl leading-relaxed md:text-2xl">
                   «&nbsp;{t.quote}&nbsp;»
                 </p>
-                <div className="mt-6">
-                  <div className="font-semibold">{t.name}</div>
-                  <div className="text-sm text-muted-foreground">{t.role}</div>
+                <div className="mt-6 flex items-center gap-3">
+                  <div className="relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-gradient-to-br from-primary/15 to-accent/15 text-primary">
+                    <User className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">{t.name}</div>
+                    <div className="text-sm text-muted-foreground">{t.role}</div>
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>
