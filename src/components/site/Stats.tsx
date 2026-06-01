@@ -10,7 +10,7 @@ function Counter({ to, suffix }: { to: number; suffix: string }) {
   useEffect(() => {
     if (!inView) return;
     const start = performance.now();
-    const dur = 1400;
+    const dur = 1800;
     let raf = 0;
     const tick = (t: number) => {
       const p = Math.min((t - start) / dur, 1);
@@ -26,8 +26,8 @@ function Counter({ to, suffix }: { to: number; suffix: string }) {
 
 export function Stats() {
   return (
-    <section className="border-b border-border bg-card py-20">
-      <div className="container-x grid grid-cols-2 gap-10 md:grid-cols-4">
+    <section className="border-b border-border bg-card py-20 ">
+      <div className=" container-x grid grid-cols-2 gap-10 md:grid-cols-4 ">
         {stats.map((s) => (
           <div key={s.label} className="text-center">
             <div className="font-display text-4xl font-semibold tracking-tight text-foreground md:text-5xl">

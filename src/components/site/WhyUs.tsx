@@ -24,13 +24,13 @@ export function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: (i % 3) * 0.08, ease: "easeOut" }}
-              className="group relative rounded-2xl border border-border/70 bg-card p-6 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[var(--shadow-card)]"
+              className="group relative rounded-2xl border border-border/70 bg-card p-6 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-[var(--shadow-card)]"
             >
               {/* Petite lueur interne cachée au survol */}
               <div className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-primary/[0.02] to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
 
               {/* Conteneur d'icône arrondi et stylisé */}
-              <div className="mb-5 inline-flex h-9 w-9 items-center justify-center rounded-full border border-primary/10 bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-105">
+              <div className="mb-5 inline-flex h-9 w-9 items-center justify-center rounded-full border border-accent/10 bg-primary/10 text-accent transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-105">
                 <Check className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
               </div>
               

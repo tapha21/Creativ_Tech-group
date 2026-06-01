@@ -48,10 +48,10 @@ export const projects = [
 export const categories = ["Tous", "Web", "Mobile", "SaaS", "Cybersécurité", "Branding", "IA"] as const;
 
 export const stats = [
-  { value: 120, suffix: "+", label: "Projets livrés" },
-  { value: 80, suffix: "+", label: "Clients satisfaits" },
-  { value: 45, suffix: "+", label: "Audits de sécurité" },
-  { value: 18, suffix: "", label: "Membres de l'équipe" },
+  { value: 5, suffix: "+", label: "Projets livrés" },
+  { value: 100, suffix: "+", label: "Clients satisfaits" },
+  { value: 3, suffix: "", label: "Membres de l'équipe" },
+  { value: 24, suffix: "/7", label: "Support & Maintenance" },
 ] as const;
 
 export const whyUs = [

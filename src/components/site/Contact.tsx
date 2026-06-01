@@ -16,7 +16,8 @@ export function Contact() {
             <InfoCard icon={<Mail className="h-4 w-4" />} title="Email" value="hello@creativ-tech.io" />
             <InfoCard icon={<Phone className="h-4 w-4" />} title="Téléphone" value="+221 77 000 00 00" />
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-              <InfoCard icon={<MessageCircle className="h-4 w-4" />} title="WhatsApp" value="Discutez avec nous instantanément" accent />
+              <InfoCard icon={<MessageCircle className="h-4 w-4" />}
+               title="WhatsApp" value="Discutez avec nous instantanément" accent />
             </a>
             <InfoCard icon={<MapPin className="h-4 w-4" />} title="Bureau" value="Dakar, Sénégal" />
             <div className="h-48 overflow-hidden rounded-xl border border-border bg-muted notebook-bg" />
@@ -75,7 +76,7 @@ export function Contact() {
 function InfoCard({ icon, title, value, accent }: { icon: React.ReactNode; title: string; value: string; accent?: boolean }) {
   return (
     <div className={`flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-colors hover:bg-muted/40 ${accent ? "border-accent/40" : ""}`}>
-      <div className={`inline-flex h-9 w-9 items-center justify-center rounded-md ${accent ? "bg-accent text-accent-foreground" : "bg-primary/10 text-primary"}`}>
+      <div className={`inline-flex h-9 w-9 items-center justify-center rounded-md ${accent ? "bg-accent text-accent-foreground" : "bg-accent/10 text-accent"}`}>
         {icon}
       </div>
       <div>

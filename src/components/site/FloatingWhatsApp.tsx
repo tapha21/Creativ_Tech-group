@@ -7,13 +7,13 @@ export function FloatingWhatsApp() {
       target="_blank"
       rel="noreferrer"
       aria-label="Discuter sur WhatsApp"
-      className="group fixed bottom-6 right-6 z-50 inline-flex h-12 items-center gap-2.5 rounded-full bg-[#25D366] p-3 text-white shadow-[0_8px_24px_rgba(37,211,102,0.3)] transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_32px_rgba(37,211,102,0.5)] hover:ring-2 hover:ring-primary focus:outline-none md:h-14 md:pl-4 md:pr-5"
+      className="group fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 inline-flex h-12 sm:h-14 items-center gap-2.5 rounded-full bg-[#25D366] px-4 text-white shadow-[0_8px_24px_rgba(37,211,102,0.3)] transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_32px_rgba(37,211,102,0.5)] hover:ring-2 hover:ring-white/20 focus:outline-none"
     >
       {/* Conteneur de l'icône avec pastille de notification style "message non lu" */}
-      <div className="relative flex h-6 w-6 items-center justify-center md:h-7 md:w-7">
+      <div className="relative flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center shrink-0">
         
         {/* Badge de notification clignotant discret */}
-        <span className="absolute -top-1.5 -right-1.5 flex h-2.5 w-2.5">
+        <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" />
           <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-red-500" />
         </span>
@@ -28,8 +28,8 @@ export function FloatingWhatsApp() {
         </svg>
       </div>
 
-      {/* Texte visible sur Desktop, masqué intelligemment sur Mobile */}
-      <span className="hidden text-sm font-bold tracking-wide md:inline">
+      {/* Texte parfaitement lisible et ajusté sur Mobile et Desktop */}
+      <span className="text-xs sm:text-sm font-bold tracking-wide">
         Discuter avec l'équipe
       </span>
     </a>

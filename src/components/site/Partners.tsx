@@ -17,9 +17,9 @@ export function Partners() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="group flex flex-col items-center justify-center gap-2 rounded-xl border border-border bg-background p-5 text-center transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
+                className="group flex flex-col items-center justify-center gap-2 rounded-xl border border-border bg-background p-5 text-center transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-md"
               >
-                <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-accent/10 text-accent transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                   <Icon className="h-5 w-5" />
                 </div>
                 <span className="font-display text-sm font-medium text-foreground/80">{p.name}</span>

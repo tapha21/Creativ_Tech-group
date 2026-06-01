@@ -18,9 +18,9 @@ import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Creativ-Tech — Construire le futur digital de l'Afrique" },
-      { name: "description", content: "Studio africain d'innovation digitale spécialisé en logiciel, cybersécurité, automatisation IA et transformation digitale. Depuis Dakar, pour le monde." },
-      { property: "og:title", content: "Creativ-Tech — Construire le futur digital de l'Afrique" },
+      { title: "Creativ_Tech-Tech — Construire le futur digital de l'Afrique" },
+      { name: "description", content: "Agence senegalaise  digitale spécialisé en logiciel, cybersécurité, automatisation IA et transformation digitale. Depuis Dakar, pour le monde." },
+      { property: "og:title", content: "Creativ_Tech — Construire le futur digital de l'Afrique" },
       { property: "og:description", content: "Logiciel, cybersécurité, automatisation IA et transformation digitale — pensés à Dakar." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -32,11 +32,11 @@ export const Route = createFileRoute("/")({
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Organization",
-        name: "Creativ-Tech",
+        name: "Creativ_Tech",
         url: "/",
         slogan: "Solution Digital",
         areaServed: "Africa",
-        description: "Studio d'innovation digitale construisant logiciel, cybersécurité et solutions IA pour les entreprises africaines et internationales.",
+        description: "Agence Senegalaise  construisant logiciel, cybersécurité et solutions IA pour les entreprises africaines et internationales.",
       }),
     }],
   }),

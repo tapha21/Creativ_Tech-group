@@ -13,13 +13,10 @@ export function Process() {
         />
 
         <div className="relative mx-auto mt-16 max-w-4xl">
-          {/* Ligne verticale centrale - Desktop */}
-          <div className="pointer-events-none absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-border md:block" />
-          
-          {/* Ligne verticale latérale - Mobile */}
-          <div className="pointer-events-none absolute left-4 top-0 h-full w-px bg-border md:hidden" />
+          {/* Ligne verticale centrale - Identique partout désormais */}
+          <div className="pointer-events-none absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-border" />
 
-          <ul className="space-y-10 md:space-y-14">
+          <ul className="space-y-10">
             {processSteps.map((s, i) => {
               const Icon = s.icon;
               const left = i % 2 === 0;
@@ -31,36 +28,35 @@ export function Process() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.5, delay: 0.05, ease: "easeOut" }}
-                  className="relative md:grid md:grid-cols-2 md:gap-10"
+                  className="relative grid grid-cols-2 gap-4 sm:gap-10"
                 >
-                  {/* Pastille Orange Simple & Solide avec l'animation Spring d'origine */}
+                  {/* Pastille Orange Centrée - Identique sur tous les écrans */}
                   <motion.div
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true, margin: "-80px" }}
                     transition={{ type: "spring", stiffness: 220, damping: 18, delay: 0.15 }}
-                    className="absolute left-4 top-3 z-10 -translate-x-1/2 md:left-1/2"
+                    className="absolute left-1/2 top-3 z-10 -translate-x-1/2"
                   >
-                    {/* Fond orange uni, icône blanche, aucun reflet/flou */}
-                    <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm">
+                    <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-sm">
                       <Icon className="h-4 w-4" />
                     </div>
                   </motion.div>
 
-                  {/* Bloc de la Carte avec l'alignement d'origine */}
-                  <div className={`pl-14 md:pl-0 ${left ? "md:pr-12 md:text-right" : "md:col-start-2 md:pl-12"}`}>
-                    <div className="inline-block rounded-2xl border border-border bg-background p-5 shadow-sm text-left w-full max-w-md">
+                  {/* Bloc de la Carte avec alternance stricte forcée sur mobile */}
+                  <div className={`w-full ${left ? "pr-6 sm:pr-12 text-right" : "col-start-2 pl-6 sm:pl-12 text-left"}`}>
+                    <div className="inline-block rounded-2xl border border-border bg-background p-4 sm:p-5 shadow-sm text-left w-full">
                       
-                      {/* Numéro de l'étape - Texte Orange */}
-                      <div className="font-display text-xs font-semibold tracking-widest text-primary">
+                      {/* Numéro de l'étape */}
+                      <div className="font-display text-[10px] sm:text-xs font-semibold tracking-widest text-primary">
                         ÉTAPE {s.n}
                       </div>
                       
-                      <h3 className="mt-1 font-display text-lg font-semibold text-foreground">
+                      <h3 className="mt-1 font-display text-base sm:text-lg font-semibold text-foreground leading-tight">
                         {s.title}
                       </h3>
                       
-                      <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">
+                      <p className="mt-1.5 text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         {s.desc}
                       </p>
                       
